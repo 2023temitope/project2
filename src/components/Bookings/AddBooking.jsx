@@ -12,17 +12,17 @@ function AddBooking(props) {
     const [buyerID, setBuyerID] = useState();
     
     function CheckBooking() {
-        axios.get("http://localhost:8085/booking/get=" + params.id)
+        axios.get("http://localhost:8085/property/get/" + params.id)
         .then(response => {
             console.log(response)
-            for (const booking of response.data) {
+            for (const booking of response.data.bookings) {
                 if (booking.date === date && booking.time === time) {
                          alert("Booking not available")
                          return;
                 }
             }
         
-            axios.post("http://localhost:8085/booking/create",{date, time, buyerID, properties: params.id})
+            axios.post("http://localhost:8085/booking/create",{date, time, buyerID, property:{id: params.id}})
                 .then(response => {
                     console.log(response);
                     setDate("");
@@ -31,7 +31,7 @@ function AddBooking(props) {
                     props.getBookings();
                 }).catch(err => console.error(err))
         })
-
+        .catch(err => console.error(err))
     }
 
     function getBuyers() {
@@ -61,15 +61,15 @@ function AddBooking(props) {
             <label htmlFor="time">Time</label>
             <select className="form-control border-3 border-primary rounded" style={{width:"250px"}} value={time} onChange={(e) => setTime(e.target.value)} required>
                 <option value="">Select Time</option>
-                <option value="8AM">8:00-9:00</option>
-                <option value="9AM">9:00-10:00</option>
-                <option value="10AM">10:00-11:00</option>
-                <option value="11AM">11:00-12:00</option>
-                <option value="12PM">12:00-13:00</option>
-                <option value="1PM">13:00-14:00</option>
-                <option value="2PM">14:00-15:00</option>
-                <option value="3PM">15:00-16:00</option>
-                <option value="4PM">16:00-17:00</option>
+                <option value="08:00:00">08:00-9:00</option>
+                <option value="9:00:00">9:00-10:00</option>
+                <option value="10:00:00">10:00-11:00</option>
+                <option value="11:00:00">11:00-12:00</option>
+                <option value="12:00:00">12:00-13:00</option>
+                <option value="13:00:00">13:00-14:00</option>
+                <option value="14:00:00">14:00-15:00</option>
+                <option value="15:00:00">15:00-16:00</option>
+                <option value="16:00:00">16:00-17:00</option>
             </select>      
             <label htmlFor="time">Buyer</label> 
             <select className="form-control border-3 border-primary rounded" style={{width:"250px"}} value={buyerID} onChange={(e) => setBuyerID(e.target.value)} required>

@@ -4,7 +4,7 @@ import axios from "axios";
 function BookingStructure(props) {
 
     function deleteBooking (){
-    axios.delete("http://localhost:8085/booking/cancel" + props.id)
+    axios.delete("http://localhost:8085/booking/cancel/" + props.id)
     .then(response => {props.getBookings()})
     .catch(err => console.error(err))
     }
