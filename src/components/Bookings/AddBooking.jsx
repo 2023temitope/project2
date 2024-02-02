@@ -7,11 +7,12 @@ function AddBooking(props) {
     const [time, setTime] = useState("");
     const params = useParams ("");
     const buyerList = [];
-    useEffect(()=>{getBuyers()},[])
+    // useEffect(()=>{getBuyers()},[])
     const [buyers, setBuyers] = useState([])
     const [buyerID, setBuyerID] = useState();
     
     function CheckBooking() {
+        useEffect(()=>{getBuyers()},[])
         axios.get("http://localhost:3000/bookings?properties=" + params.id)
         .then(response => {
             console.log(response)
@@ -22,7 +23,7 @@ function AddBooking(props) {
                 }
             }
         
-            axios.post("http://localhost:8080/booking/create",{date, time, buyerID, properties: params.id})
+            axios.post("http://localhost:8081/booking/create",{date, time, buyerID, properties: params.id})
                 .then(response => {
                     console.log(response);
                     setDate("");
@@ -31,10 +32,11 @@ function AddBooking(props) {
                     props.getBookings();
                 }).catch(err => console.error(err))
         })
+
     }
 
     function getBuyers() {
-        axios.get("http://localhost:8080/buyer/get")
+        axios.get("http://localhost:8081/buyer/get")
         .then(response=>{
             setBuyers(response.data);
         })
@@ -45,7 +47,7 @@ function AddBooking(props) {
         console.log("Buyers:", buyer);
         buyerList.push(
             <option value={buyer.id}>
-                {buyer.firstname + buyer.lastname}
+                {buyer.firstName + buyer.lastName}
             </option>
         )
     }

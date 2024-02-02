@@ -12,7 +12,7 @@ function RegBuyer(props) {
 
 
 
-         axios.get("http://localhost:8080/buyer/get").then(response => {
+         axios.get("http://localhost:8081/buyer/get").then(response => {
           console.log(response)
              for (const buyer of response.data) {
                 if (buyer.firstName.toLowerCase() === firstName.toLowerCase() && buyer.lastName.toLowerCase() === lastName.toLowerCase()) {
@@ -21,7 +21,7 @@ function RegBuyer(props) {
                  }
              }
         
-            axios.post("http://localhost:8080/buyer/create",
+            axios.post("http://localhost:8081/buyer/create",
                 { firstName, lastName })
                 .then(response => {
                     console.log(response);
