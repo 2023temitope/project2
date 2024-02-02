@@ -8,7 +8,7 @@ import { useEffect,useState } from "react";
 function Buyers() {
     
     function getBuyers() {
-        axios.get("http://localhost:8081/buyer/get")
+        axios.get("http://localhost:8085/buyer/get")
         .then((response)=>{setBuyers(response.data)})
         .catch(console.log)        
     }

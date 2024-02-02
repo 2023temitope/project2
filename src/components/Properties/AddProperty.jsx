@@ -20,7 +20,7 @@ function AddProperty() {
 
         e.preventDefault()
 
-        axios.post("http://localhost:8081/property/create", { address, type, city, price, bedroom, bathroom, garden, status, image })
+        axios.post("http://localhost:8085/property/create", { address, type, city, price, bedroom, bathroom, garden, status, image })
 
             .then(response => {
                 setAddress("");
@@ -115,10 +115,11 @@ function AddProperty() {
             <div className="row">
                 <div className="col">
                     <label htmlFor="garden" className="form-label">Garden</label>
-                    <select className="form-select border-3 border-primary" style={{ width: "250px", height: "37px" }} onChange={e => setGarden(e.target.value)}   >
-                        <option selected value={""} onChange={e => setGarden(e.target.value)} ></option>
-                        <option onChange={e => setGarden(e.target.value)} >Yes</option>
-                        <option onChange={e => setGarden(e.target.value)} >No</option>
+                    <select value={garden} className="form-select border-3 border-primary" style={{ width: "250px", height: "37px" }} onChange={e => setGarden(e.target.value)}   >
+
+                        <option  value="" >select an option</option>
+                        <option value= "Yes">Yes</option>
+                        <option  value ="No" >No</option>
                     </select>
                 </div>
                 <div className="col">

@@ -12,8 +12,7 @@ function AddBooking(props) {
     const [buyerID, setBuyerID] = useState();
     
     function CheckBooking() {
-        useEffect(()=>{getBuyers()},[])
-        axios.get("http://localhost:3000/bookings?properties=" + params.id)
+        axios.get("http://localhost:8085/booking/get=" + params.id)
         .then(response => {
             console.log(response)
             for (const booking of response.data) {
@@ -23,7 +22,7 @@ function AddBooking(props) {
                 }
             }
         
-            axios.post("http://localhost:8081/booking/create",{date, time, buyerID, properties: params.id})
+            axios.post("http://localhost:8085/booking/create",{date, time, buyerID, properties: params.id})
                 .then(response => {
                     console.log(response);
                     setDate("");
@@ -36,7 +35,7 @@ function AddBooking(props) {
     }
 
     function getBuyers() {
-        axios.get("http://localhost:8081/buyer/get")
+        axios.get("http://localhost:8085/buyer/get")
         .then(response=>{
             setBuyers(response.data);
         })

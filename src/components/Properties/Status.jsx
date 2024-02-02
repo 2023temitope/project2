@@ -18,7 +18,7 @@ const params =useParams();
     function handleClick(e, status) {
         e.preventDefault()
 
-        axios.put("http://localhost:8081/property/update" + props.id, { status })
+        axios.put("http://localhost:8085/property/update" + props.id, { status })
             .then(response => {
                 props.getProperties()
 

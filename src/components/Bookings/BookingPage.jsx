@@ -18,13 +18,13 @@ function BookingPage() {
 
 
     function getBookings() {
-        axios.get("http://localhost:3000/bookings?properties=" + params.id)
+        axios.get("http://localhost:8085/booking/get=" + params.id)
             .then((response) => { setBookings(response.data) })
             .catch(console.log)
     }
 
     function getProperties() {
-        axios.get("http://localhost:8080/property/get" + params.id)
+        axios.get("http://localhost:8085/property/get" + params.id)
             .then((response) => { setProperty(response.data) })
             .catch(console.log)
     }
