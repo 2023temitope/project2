@@ -17,13 +17,13 @@ function App() {
   return (
     <div>
        <Router>
-        <nav className="navbar align-content-center " style={{display: "flex",  backgroundColor: "#e3f2fd",}} >
+        <nav className="navbar align-content-center " style={{display: "flex",  backgroundColor: "#EE813B",}} >
           <div><div className="homeimage"></div>
-           <Link to='/'><button type="button" className="btn btn-primary" style={{margin:"10px"}}>Home</button></Link>
-            <Link  to='/buyers'><button type="button" className="btn btn-primary" style={{margin:"10px"}}>Buyers</button></Link>
-            <Link to='/sellers'><button type="button" className="btn btn-primary" style={{margin:"10px"}}>Sellers</button></Link>
-            <Link to='/properties'><button type="button" className="btn btn-primary" style={{margin:"10px"}}> Properties</button></Link>
-            <Link to='/addpropertiespage'><button type="button" className="btn btn-primary" style={{margin:"10px"}}> Add Property</button></Link>
+           <Link to='/'><button type="button" className="btn btn-primary" style={{margin:"40px"}}>Home</button></Link>
+            <Link  to='/buyers'><button type="button" className="btn btn-primary" style={{margin:"20px"}}>Buyers</button></Link>
+            <Link to='/sellers'><button type="button" className="btn btn-primary" style={{margin:"20px"}}>Sellers</button></Link>
+            <Link to='/properties'><button type="button" className="btn btn-primary" style={{margin:"20px"}}> Properties</button></Link>
+            <Link to='/addpropertiespage'><button type="button" className="btn btn-primary" style={{margin:"20px"}}> Add Property</button></Link>
            
             </div>
         </nav>

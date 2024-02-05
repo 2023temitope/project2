@@ -42,7 +42,7 @@ function RegBuyer(props) {
             e.preventDefault();
             CheckBuyer();
         }}>
-            <div class="border border-primary p-2 mb-2 border-4" style={{ backgroundColor: "#e3f2fd", width: "80%" }}>
+            <div class="border border-primary p-2 mb-2 border-4" style={{ backgroundColor: "#EE3BE3", width: "80%" }}>
                 <label htmlFor="firstName">First Name</label>
                 <br /><input className="form-control border-3 border-primary rounded" style={{ width: "250px", height: "31px" }}
                     id="firstName"

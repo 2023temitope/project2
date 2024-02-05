@@ -16,7 +16,7 @@ function AddProperty() {
     const [image, setImage] = useState("");
     const navigate = useNavigate("")
 
-    return (<form class="border border-primary p-2 mb-2 border-4" style={{ backgroundColor: "#e3f2fd", width: "80%" }} onSubmit={e => {
+    return (<form class="border border-primary p-2 mb-2 border-4" style={{ backgroundColor: "#EE3BE3", width: "80%" }} onSubmit={e => {
 
         e.preventDefault()
 

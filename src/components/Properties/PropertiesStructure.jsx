@@ -3,7 +3,9 @@ import 'bootstrap/dist/css/bootstrap.css';
 import { useState, useEffect } from "react";
 import Status from "./Status";
 import { useNavigate } from "react-router";
-
+import bathroomPicture from "../../images/bathroom-bathtub-bubble-foam-water-svgrepo-com.svg";
+import bedroomPicture from "../../images/bedroom-hotel-svgrepo-com.svg";
+import gardenPicture from "../../images/garden-tree-svgrepo-com.svg";
 function PropertiesStructure(props) {
 
     console.log(props)
@@ -23,9 +25,9 @@ function PropertiesStructure(props) {
                             Address: {props.address}<br />
                             City: {props.city}<br />
                             Type: {props.type}<br />
-                            Bedrooms: {props.bedroom}<br />
-                            Bathroom: {props.bathroom}<br />
-                            Garden: {props.garden}<br />
+                            <img  width= "30px"src = {bedroomPicture} alt=""/> {props.bedroom}<br />
+                           < img  width= "30px"src = {bathroomPicture} alt=""/> {props.bathroom}<br />
+                           < img  width= "20px"src = {gardenPicture} alt=""/> {props.garden}<br />
                             Status: {props.status}<br />
                             <br></br>
                             <Status id={props.id} getProperties={props.getProperties} />
@@ -52,9 +54,9 @@ else {
                         Address: {props.address}<br />
                         City: {props.city}<br />
                         Type: {props.type}<br />
-                        Bedrooms: {props.bedroom}<br />
-                        Bathroom: {props.bathroom}<br />
-                        Garden: {props.garden}<br />
+                        <img  width= "30px"src = {bedroomPicture} alt=""/> {props.bedroom}<br />
+                        <img width= "30px" src = {bathroomPicture} alt="" /> {props.bathroom}<br />
+                        < img  width= "20px"src = {gardenPicture} alt=""/> {props.garden}<br />
                         Status: {props.status}<br />
                         <br></br>
                         <Status id={props.id} getProperties={props.getProperties} />

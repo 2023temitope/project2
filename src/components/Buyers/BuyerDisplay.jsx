@@ -18,7 +18,7 @@ function BuyerDisplay(props) {
     }
 
 return (
-    <div class="border border-primary p-2 mb-2 border-4" style={{ backgroundColor: "#e3f2fd", width: "80%" }}>
+    <div class="border border-primary p-2 mb-2 border-4" style={{ backgroundColor: "#EE3BE3", width: "80%" }}>
         {buyerList}
     </div>
 )

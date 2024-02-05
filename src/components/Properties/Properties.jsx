@@ -6,7 +6,7 @@ function Properties() {
 
   return (
     <div>
-      <h3 style={{ color: "#0a69ca" }}>Search Property</h3>
+      <h3 style={{ color: "#EE3BE3" }}>Search Property</h3>
       <br/><PropertiesDisplay/>
     </div>
   );

@@ -17,7 +17,7 @@ function Sellers() {
 
     return (
         <div className="row">
-            <br /><h3 style={{ color: "#0a69ca" }}>Sellers</h3><br/><br/>
+            <br /><h3 style={{ color: "#EE3BE3" }}>Sellers</h3><br/><br/>
             <br /><div className="col-6" ><AddSeller getSellers={getSellers}/></div>
             <div className="col-4"><SellerDisplay listSellers={sellers}/></div>
         </div>);
