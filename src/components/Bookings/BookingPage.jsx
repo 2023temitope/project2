@@ -9,19 +9,13 @@ import PropertiesStructure from "../Properties/PropertiesStructure";
 function BookingPage() {
     const params = useParams();
 
-    const [property, setProperty] = useState([]);
-    const [bookings, setBookings] = useState([]);
-
-    const propertyCard = []
-
-    useEffect(() => { getProperties(); getBookings(); }, []);
+    const [property, setProperty] = useState({bookings:[]});
+  
 
 
-    function getBookings() {
-        axios.get("http://localhost:8085/booking/get")
-            .then((response) => { setBookings(response.data) })
-            .catch(console.log)
-    }
+    useEffect(() => { getProperties();  }, []);
+
+
 
     function getProperties() {
         axios.get("http://localhost:8085/property/get/" + params.id)
@@ -29,22 +23,20 @@ function BookingPage() {
             .catch(console.log)
     }
 
-    propertyCard.push(
-        <div key={property.id}>
-            <h5 style={{ color: "#0a69ca" }}>{property.address}</h5>
-            <img style={{ width: "80%" }} src={property.image} />
-
-        </div>)
-
-
+    
 
     return (
         <div className="row">
-            <h3 style={{ color: "#0a69ca" }}>Bookings</h3><br />
+            <h3 style={{ color: "#EE3BE3" }}>Bookings</h3><br />
 
-            <br /><br /><div className="col-4">{propertyCard}</div>
-            <div className="col-6"><AddBooking  getBookings={getBookings} />
-                <BookingDisplay bookingList={bookings} getBookings={getBookings} />
+            <br /><br /><div className="col-4">
+            <h5 style={{ color: "#0a69ca" }}>{property.address}</h5>
+            <img style={{ width: "80%" }} src={property.image} />
+
+        </div>
+            
+            <div className="col-6"><AddBooking  getBookings={getProperties} />
+                <BookingDisplay bookingList={property.bookings} getBookings={getProperties} />
     
             </div>
         </div>

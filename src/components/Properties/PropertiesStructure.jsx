@@ -18,7 +18,7 @@ function PropertiesStructure(props) {
                     <div className="card-body">
                         <h4>£{Number(props.price).toLocaleString("EN-UK")}</h4><br />
                         <img id="House" src={props.image} width={"70%"}></img>
-                        <button style={{ margin:"10px"}} className="btn btn-primary" type="submit" onClick={() => navigate("/bookings/" + props.id)}>
+                        <button style={{ margin:"10px"}} className="btn btn-success" type="submit" onClick={() => navigate("/bookings/" + props.id)}>
                                 Bookings
                             </button>
                         <div className="card-text">

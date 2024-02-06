@@ -10,6 +10,8 @@ function AddBooking(props) {
     // useEffect(()=>{getBuyers()},[])
     const [buyers, setBuyers] = useState([])
     const [buyerID, setBuyerID] = useState();
+    const [firstName, setFirstName] = useState();
+    const [lastName, setLastName] = useState();
     
     function CheckBooking() {
         axios.get("http://localhost:8085/property/get/" + params.id)
@@ -22,12 +24,12 @@ function AddBooking(props) {
                 }
             }
         
-            axios.post("http://localhost:8085/booking/create",{date, time, buyerID, property:{id: params.id}})
+            axios.post("http://localhost:8085/booking/create",{date, time, buyer:{id: buyerID}, property:{id: params.id}})
                 .then(response => {
                     console.log(response);
                     setDate("");
                     setTime("");
-                    setBuyerID();
+                    setBuyerID("");
                     props.getBookings();
                 }).catch(err => console.error(err))
         })
@@ -45,8 +47,8 @@ function AddBooking(props) {
     for (const buyer of buyers) {
         console.log("Buyers:", buyer);
         buyerList.push(
-            <option value={buyer.id}>
-                {buyer.firstName + buyer.lastName}
+            <option onChange={(e) => setBuyerID(e.target.value)} value={buyer.id}>
+                {buyer.firstName + " " + buyer.lastName}
             </option>
         )
     }
@@ -55,7 +57,8 @@ function AddBooking(props) {
         e.preventDefault();
         CheckBooking();
     }}>
-        <div >
+        <div className="form-control border-3 border-primary rounded" style={{backgroundColor:"#EC97DB"}}>
+            
             <label htmlFor="date">Date</label>
             <input className="form-control border-3 border-primary rounded" style={{width:"250px"}}type="date" value={date} onChange={(e) => setDate(e.target.value)} required />
             <label htmlFor="time">Time</label>

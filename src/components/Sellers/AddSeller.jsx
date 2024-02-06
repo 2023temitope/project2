@@ -38,7 +38,7 @@ axios.post("http://localhost:8085/seller/create", { firstName, lastName })
         CheckSeller();
         
     }}>
-        <div class="border border-primary p-2 mb-2 border-4" style={{ backgroundColor: "#EE3BE3", width: "80%" }}>
+        <div class="border border-primary p-2 mb-2 border-4" style={{ backgroundColor: "#EC97DB", width: "80%" }}>
             <label htmlFor="firstName">First Name</label>
             <br /><input className="form-control border-3 border-primary rounded" style={{ width: "250px", height: "31px" }}
                 id="firstName"

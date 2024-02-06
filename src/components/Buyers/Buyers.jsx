@@ -17,9 +17,9 @@ function Buyers() {
 
     return (
         <div className= "row">
-            <br /><h3 style={{ color: "#EE3BE3" }}>Buyers</h3><br/><br/>
+            <br /><h3 style={{ color: "#EE3BE3", marginLeft: "20px" }}>Buyers</h3><br/><br/>
             <br /><div className="col-6"><RegBuyer getBuyers={getBuyers}/></div>
-            <div className="col-4"><BuyerDisplay listBuyers={buyers} /></div>
+            <div className="col-4"><BuyerDisplay listBuyers={buyers} getBuyers={getBuyers} /></div>
 
         </div>);
 }

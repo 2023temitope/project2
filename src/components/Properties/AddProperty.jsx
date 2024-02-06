@@ -16,7 +16,7 @@ function AddProperty() {
     const [image, setImage] = useState("");
     const navigate = useNavigate("")
 
-    return (<form class="border border-primary p-2 mb-2 border-4" style={{ backgroundColor: "#EE3BE3", width: "80%" }} onSubmit={e => {
+    return (<form class="border border-primary p-2 mb-2 border-4" style={{ backgroundColor: "#EC97DB", width: "80%" }} onSubmit={e => {
 
         e.preventDefault()
 
@@ -82,6 +82,7 @@ function AddProperty() {
                         id="price"
                         className="form-control border-3 border-primary rounded" style={{ width: "250px", height: "37px" }}
                         type="number"
+                        min="0"
                         value={price}
                         onChange={e => setPrice(e.target.value)}
                         required/>
@@ -116,8 +117,7 @@ function AddProperty() {
                 <div className="col">
                     <label htmlFor="garden" className="form-label">Garden</label>
                     <select value={garden} className="form-select border-3 border-primary" style={{ width: "250px", height: "37px" }} onChange={e => setGarden(e.target.value)}   >
-
-                        <option  value="" >select an option</option>
+                        <option  value="" >Select an option</option>
                         <option value= "Yes">Yes</option>
                         <option  value ="No" >No</option>
                     </select>

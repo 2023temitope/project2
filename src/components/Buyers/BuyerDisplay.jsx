@@ -13,12 +13,13 @@ function BuyerDisplay(props) {
                 firstname={buyer.firstName}
                 lastname={buyer.lastName}
                 id={buyer.id}
+                getBuyers={props.getBuyers}
             />
         )
     }
 
 return (
-    <div class="border border-primary p-2 mb-2 border-4" style={{ backgroundColor: "#EE3BE3", width: "80%" }}>
+    <div class="border border-primary p-2 mb-2 border-4" style={{ backgroundColor: "#ec97db", width: "80%" }}>
         {buyerList}
     </div>
 )

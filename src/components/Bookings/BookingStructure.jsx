@@ -11,10 +11,10 @@ function BookingStructure(props) {
     
     return (
         <div className="row">
-        <p className="col">Buyer ID: {props.buyerID}</p>
+        <p className="col">Buyer: {props.firstName} {props.lastName}</p>
         <p className="col">Date: {props.date}</p>
         <p className="col">Time: {props.time}</p>
-        <p><button style={{width: "80px"}}className="btn btn-primary col" onClick={deleteBooking}>Delete</button></p>
+        <p><button style={{width: "80px"}}className="btn btn-danger col" onClick={deleteBooking}>Delete</button></p>
         </div>
     )
 }
@@ -23,7 +23,9 @@ BookingStructure.propTypes = {
     properties: PropTypes.number.isRequired,
     id: PropTypes.number.isRequired,
     date: PropTypes.string.isRequired,
-    time: PropTypes.string.isRequired
+    time: PropTypes.string.isRequired,
+    firstName: PropTypes.string.isRequired,
+    lastName: PropTypes.string.isRequired
 }
 
 export default BookingStructure;
