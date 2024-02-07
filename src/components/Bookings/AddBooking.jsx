@@ -7,7 +7,7 @@ function AddBooking(props) {
     const [time, setTime] = useState("");
     const params = useParams ("");
     const buyerList = [];
-    // useEffect(()=>{getBuyers()},[])
+     useEffect(()=>{getBuyers()},[])
     const [buyers, setBuyers] = useState([])
     const [buyerID, setBuyerID] = useState();
     const [firstName, setFirstName] = useState();

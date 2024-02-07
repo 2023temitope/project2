@@ -17,11 +17,11 @@ function PropertiesStructure(props) {
                 <div className="card">
                     <div className="card-body">
                         <h4>£{Number(props.price).toLocaleString("EN-UK")}</h4><br />
-                        <img id="House" src={props.image} width={"70%"}></img>
-                        <button style={{ margin:"10px"}} className="btn btn-success" type="submit" onClick={() => navigate("/bookings/" + props.id)}>
+                        <img id="House" style={{marginLeft: "35px"}} src={props.image} width={"70%"}></img>
+                        <button style={{ margin:"10px", marginLeft: "90px"}} className="btn btn-success" type="submit" onClick={() => navigate("/bookings/" + props.id)}>
                                 Bookings
                             </button>
-                        <div className="card-text">
+                        <div className="card-text" style={{textAlign: "center", fontWeight:"bold"}}>
                             Address: {props.address}<br />
                             City: {props.city}<br />
                             Type: {props.type}<br />
@@ -46,11 +46,11 @@ else {
             <div className="card">
                 <div className="card-body">
                     <h4>£{Number(props.price).toLocaleString("EN-UK")}</h4><br />
-                    <img id="House" src={props.image} width={"70%"}></img>
-                    <button disabled={true} style={{ margin:"10px"}} className="btn btn-primary" type="submit" onClick={() => navigate("/Bookings/" + props.id)}>
+                    <img id="House" style={{marginLeft: "35px"}} src={props.image} width={"70%"}></img>
+                    <button disabled={true} style={{ margin:"10px", marginLeft: "90px"}} className="btn btn-primary" type="submit" onClick={() => navigate("/Bookings/" + props.id)}>
                             Bookings
                         </button>
-                    <div className="card-text">
+                    <div className="card-text" style={{textAlign: "center", fontWeight:"bold"}}>
                         Address: {props.address}<br />
                         City: {props.city}<br />
                         Type: {props.type}<br />

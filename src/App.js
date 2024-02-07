@@ -13,6 +13,7 @@ import AddPropertiesPage from './components/Properties/AddPropertiesPage';
 import BookingPage from './components/Bookings/BookingPage';
 import styled, { ThemeProvider } from 'styled-components';
 import {lightTheme, darkTheme, GlobalStyles} from './themes.js'
+import moonIcon from "../src/images/moon-svgrepo-com.svg";
 
 const StyledApp = styled.div`
   color: ${(props) =>props.theme.fontColor};
@@ -38,7 +39,7 @@ function App() {
             <Link to='/sellers'><button type="button" className="btn btn-dark" style={{margin:"10px"}}>Sellers</button></Link>
             <Link to='/properties'><button type="button" className="btn btn-dark" style={{margin:"10px"}}> Properties</button></Link>
             <Link to='/addpropertiespage'><button type="button" className="btn btn-dark" style={{margin:"10px"}}> Add Property</button></Link>
-            <button onClick={() => themeToggler()} className='btn btn-light' style={{margin:"10px"}}> Change Theme</button>
+            <button onClick={() => themeToggler()} className='btn btn-light' style={{margin:"10px"}}> <img src={moonIcon} width="17px"/> Change Theme</button>
             </div>
         </nav>
         <Routes> 

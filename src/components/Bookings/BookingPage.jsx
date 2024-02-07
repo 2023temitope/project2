@@ -27,9 +27,9 @@ function BookingPage() {
 
     return (
         <div className="row">
-            <h3 style={{ color: "#EE3BE3" }}>Bookings</h3><br />
+            <h3 style={{ color: "#EE3BE3", marginLeft:"20px" }}>Bookings</h3><br />
 
-            <br /><br /><div className="col-4">
+            <br /><br /><div className="col-4" style={{marginLeft: "20px"}}>
             <h5 style={{ color: "#0a69ca" }}>{property.address}</h5>
             <img style={{ width: "80%" }} src={property.image} />
 
