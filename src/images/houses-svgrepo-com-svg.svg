@@ -1,0 +1,10 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+	<title>houses-svgrepo-com-svg</title>
+	<style>
+		.s0 { fill: #ffffff;stroke: #020202;stroke-miterlimit:10;stroke-width: 1.9 } 
+	</style>
+	<path id="Layer" class="s0" d="m13 11v7.7h-11.5v-7.7l5.7-5.7 5.8 5.7z"/>
+	<path id="Layer" class="s0" d="m17.7 11v7.7h-4.7v-7.7l-3.4-3.3 2.4-2.4 5.7 5.7z"/>
+	<path id="Layer" class="s0" d="m22.5 11v7.7h-4.8v-7.7l-3.3-3.3 2.4-2.4 5.7 5.7z"/>
+	<path id="Layer" class="s0" d="m5.3 13.9h3.8v4.8h-3.8z"/>
+</svg>

@@ -100,7 +100,7 @@ function PropertiesDisplay(props) {
                     </tr><br/>
                 </tbody>
             </table>
-            <br/><h4 style={{ color: "#EE3BE3", marginLeft: "20px" }}>Search Results</h4><br/>
+            <br/><h3 style={{ color: "#EE3BE3", marginLeft: "20px" }}>Search Results</h3><br/>
             <div className="border border-primary p-2 mb-2 border-4" style={{ backgroundColor: "#EC97DB", width: "100%" }}>
             {propertyList}
             </div>
